@@ -1,0 +1,18 @@
+<div class="comment-index">
+ 
+  <div class ="comment-container">
+    <h3>Post List</h3>
+    <% @comments.each do |comment|%>
+      <div class="posts-index-item">
+        <p><%= comment.created_at.strftime('%Y/%m/%d')%></p>
+        <p><%= comment.title %></p>
+        <%= link_to "詳細", "/comments/#{comment.id}" %>
+        <%= link_to "削除する","/comments/#{comment.id}", method: :delete %>
+      </div>
+    <%end%>
+    
+  </div>
+
+</div>
+
+

@@ -1,0 +1,22 @@
+<div class="new-comment-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-1 col-md-3 comment-new-container">
+        <h1 class="text-center text-white">Post Page</h1>
+        <%= form_for @comment do |f| %>
+          <div class="form-group">
+            <%= f.label :title, class: 'text-white' %>
+            <%= f.text_field :title, class: 'title-form' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :content, class: 'text-white' %>
+            <%= f.text_area :content, class: 'content-form' %>
+          </div>
+  
+          <%= f.submit "Please Post", class: 'btn-block btn-white' %>
+        <% end %>
+        
+      </div>
+    </div>
+  </div>
+</div>
